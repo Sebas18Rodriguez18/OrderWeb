@@ -18,22 +18,26 @@
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
-                <li><a href="#" class="nav-link text-white">Home</a></li>
-                <li><a href="#" class="nav-link text-white">Órdenes</a></li>
+                <li><a href="/view/order" class="nav-link text-white">Órdenes</a></li>
                 <li><a href="/view/causal" class="nav-link text-white">Causales</a></li>
                 <li><a href="/view/observation" class="nav-link text-white">Observaciones</a></li>
                 <li><a href="/view/activity" class="nav-link active bg-white text-primary">Actividades</a></li>
                 <li><a href="/view/type_activity" class="nav-link text-white">Tipos de Actividades</a></li>
                 <li><a href="/view/technician" class="nav-link text-white">Técnicos</a></li>
                 <li><a href="/view/role" class="nav-link text-white">Roles</a></li>
-                <li><a href="#" class="nav-link text-white">Reportes</a></li>
             </ul>
         </nav>
         <main class="col-md-10 col-lg-10 px-md-5 py-4">
             <h1 class="text-primary">Lista de Actividades</h1>
             <div th:if="${success}" class="alert alert-success" th:text="${success}"></div>
-            <a th:href="@{/viewA/form}" class="btn btn-success mb-3">
+            <a th:href="@{/viewA/form}" class="btn btn-outline-primary mb-3">
                 <i class="bi bi-plus-circle"></i> Registrar Actividad
+            </a>
+            <a href="/viewA/pdf" class="btn btn-outline-danger mb-3">
+                <i class="bi bi-file-earmark-pdf"></i> Exportar a PDF
+            </a>
+            <a href="/viewA/excel" class="btn btn-outline-success mb-3">
+                <i class="bi bi-file-earmark-excel"></i> Exportar a Excel
             </a>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped">
@@ -41,7 +45,6 @@
                     <tr>
                         <th><i class="bi bi-gear"></i> Acciones</th>
                         <th>ID</th>
-                        <th>Nombre</th>
                         <th>Descripción</th>
                         <th>Horas</th>
                         <th>Tipo Actividad</th>
@@ -68,7 +71,6 @@
                             </form>
                         </td>
                         <td th:text="${activity.id}"></td>
-                        <td th:text="${activity.name}"></td>
                         <td th:text="${activity.description}"></td>
                         <td th:text="${activity.hours}"></td>
                         <td th:text="${activity.type_activity != null ? activity.type_activity.description : 'N/A'}"></td>

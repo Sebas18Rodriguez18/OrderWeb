@@ -23,15 +23,13 @@
             </a>
             <hr />
             <ul class="nav nav-pills flex-column mb-auto">
-                <li><a href="#" class="nav-link text-white">Home</a></li>
-                <li><a href="#" class="nav-link text-white">Órdenes</a></li>
+                <li><a href="/view/order" class="nav-link text-white">Órdenes</a></li>
                 <li><a href="/view/causal" class="nav-link text-white">Causales</a></li>
                 <li><a href="/view/observation" class="nav-link text-white">Observaciones</a></li>
                 <li><a href="/view/activity" class="nav-link text-white">Actividades</a></li>
                 <li><a href="/view/type_activity" class="nav-link text-white">Tipos de Actividades</a></li>
                 <li><a href="/view/technician" class="nav-link active bg-white text-primary">Técnicos</a></li>
                 <li><a href="/view/role" class="nav-link text-white">Roles</a></li>
-                <li><a href="#" class="nav-link text-white">Reportes</a></li>
             </ul>
         </nav>
 
@@ -92,16 +90,12 @@
                                     <label for="speciality" class="form-label">
                                         <i class="bi bi-tools"></i> Especialidad
                                     </label>
-                                    <select id="specialities"
-                                            th:field="*{speciality}"
-                                            class="form-select">
-                                        <option value="">Seleccione una especialidad</option>
-                                        <option th:each="speciality : ${specialities}"
-                                                th:value="${speciality}"
-                                                th:text="${speciality}"
-                                                th:selected="${technician.speciality == speciality}">
-                                        </option>
-                                    </select>
+                                    <input id="speciality"
+                                           type="text"
+                                           th:field="*{speciality}"
+                                           class="form-control"
+                                           placeholder="Ingrese la especialidad"
+                                           maxlength="80" />
                                     <div class="form-text">
                                         <i class="bi bi-info-circle"></i> Campo opcional
                                     </div>
@@ -113,10 +107,10 @@
                                     <label for="phone" class="form-label">
                                         <i class="bi bi-telephone"></i> Teléfono
                                     </label>
-                                    <input id="phone" 
-                                           type="tel" 
-                                           th:field="*{phone}" 
-                                           class="form-control" 
+                                    <input id="phone"
+                                           type="tel"
+                                           th:field="*{phone}"
+                                           class="form-control"
                                            placeholder="Ingrese el número de teléfono"
                                            maxlength="30" />
                                     <div class="form-text">
@@ -125,6 +119,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="row mt-4">
                             <div class="col-12">
