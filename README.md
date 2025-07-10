@@ -98,7 +98,7 @@ src/
 ---
 
 ## Actividad SENA
-Este proyecto fue desarrollado como actividad del <a href="https://www.sena.edu.co/es-co/Paginas/default.aspx" target="_blank">SENA (Servicio Nacional de Aprendizaje)</a> <a href="https://sena-clem.blogspot.com" target="_blank">CLEM (Centro Latinoámericano de Especies Menores)</a> dentro del programa de análisis y desarrollo de software (ADSO).
+Este proyecto fue desarrollado como actividad del <a href="https://www.sena.edu.co/es-co/Paginas/default.aspx" target="_target">SENA (Servicio Nacional de Aprendizaje)</a> <a href="https://sena-clem.blogspot.com" target="_target">CLEM (Centro Latinoámericano de Especies Menores)</a> dentro del programa de análisis y desarrollo de software (ADSO).
 
 
 ---
